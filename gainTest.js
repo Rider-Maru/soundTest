@@ -17,7 +17,7 @@ getByteFrequencyDataAverage = function () {
         return previous + current;
     }) / analyser.frequencyBinCount;
 };
-
+/*
 navigator.mediaDevices.getUserMedia({ audio: true })
     .then(function (stream) {
         window.hackForMozzila = stream;
@@ -28,7 +28,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     .catch(function (err) {
         console.log(err.message);
     });
-
+*/
 // 透明度を変更する要素
 elLogo = document.getElementById('logo');
 // 可能な限り高いフレームレートで音量を取得し、透明度に反映する
