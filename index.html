@@ -85,9 +85,7 @@
     }
     function ring(){
         soundArray[1].start(0);
-        soundArray[1] = context.createBufferSource();
-        soundArray[1].buffer = a;
-        soundArray[1].connect(context.destination);
+
     }
     function stop(){
         soundArray[1].stop(0);
