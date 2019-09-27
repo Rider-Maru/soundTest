@@ -60,12 +60,12 @@
 
     'use strict';
 
-    var ctx, analyser, frequencies, getByteFrequencyDataAverage, elLogo, draw;
+    var context, analyser, frequencies, getByteFrequencyDataAverage, elLogo, draw;
 
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    ctx = new AudioContext();
+    context = new AudioContext();
 
-    analyser = ctx.createAnalyser();
+    analyser = context.createAnalyser();
     frequencies = new Uint8Array(analyser.frequencyBinCount);
 
     getByteFrequencyDataAverage = function () {
@@ -78,7 +78,7 @@
     navigator.mediaDevices.getUserMedia({ audio: true })
         .then(function (stream) {
             window.hackForMozzila = stream;
-            ctx.createMediaStreamSource(stream)
+            context.createMediaStreamSource(stream)
                 // AnalyserNodeに接続
                 .connect(analyser);
         })
@@ -137,7 +137,7 @@
             this.loadBuffer(this.urlList[i], i);
     }
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    context = new AudioContext();
+    //context = new AudioContext();
     bufferLoader = new BufferLoader(
         context,
         ['audio/jump.mp3',
