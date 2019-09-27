@@ -12,7 +12,7 @@
 
         window.onload = function () {
             request = new XMLHttpRequest();
-            request.open("GET", "jump.mp3", true);
+            request.open("GET", "audio/jump.mp3", true);
             request.responseType = "arraybuffer";
             request.onload = completeOnLoad;
             request.send();
