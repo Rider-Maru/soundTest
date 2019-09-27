@@ -4,7 +4,7 @@
 <p>こうゆうことですね、下の□を押すと音がなります。連続で実行できます。</p>
 <p>※注意 音が鳴ります。</p>
 <div class="sound" onclick="ring();"></div>
-<div class="sound"></div>
+<div class="sound" onclick="stop();"></div>
 <style>
     .sound {
         width: 100px;
@@ -88,5 +88,8 @@
         soundArray[1] = context.createBufferSource();
         soundArray[1].buffer = a;
         soundArray[1].connect(context.destination);
+    }
+    function stop(){
+        soundArray[1].stop();
     }
 </script>
