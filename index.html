@@ -145,7 +145,7 @@
     bufferLoader = new BufferLoader(
         context,
         ['audio/jump.mp3',
-            'audio/authorize.mp3',
+            'audio/standbyLoop.mp3',
         ],
         finishedLoading
     );
@@ -170,6 +170,7 @@
         }
     }
     function ring(){
+        soundArray[1].loop=true;
         soundArray[1].start(0);
         soundArray[1].connect(analyser);
 
